@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://xegrabdongnai.pro.vn.pro/sitemap.xml
+Sitemap: https://datxenhanh999.pro.vn.pro/sitemap.xml
