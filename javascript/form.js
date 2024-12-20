@@ -208,7 +208,7 @@ const handleSubmit = async function () {
   }
 
   // Kiểm tra định dạng số điện thoại (chỉ cho phép số và ít nhất 10 chữ số)
-  const phonePattern = /^[0-9]{10,}$/;
+  const phonePattern = /(0[3|5|7|8|9])+([0-9]{8})\b/g;
   if (!phonePattern.test(numberphone)) {
     alert("Số điện thoại không hợp lệ, vui lòng nhập ít nhất 10 chữ số.");
     return false;
@@ -216,8 +216,10 @@ const handleSubmit = async function () {
   const userIP = await takeIP();
 
   // Dữ liệu gửi đi qua Telegram
-  const message = `Người dùng đã đặt hàng\nTên Người Đặt: ${fullname}\nĐịa Chỉ đón: ${address1}\nĐịa Chỉ Đến: ${address2}\nLoại xe: ${drive}\nThời gian đi: ${timebook}\nSố điện thoại: ${numberphone}\nUserIP: ${userIP}`;
+  const message = `User booking online\nTên Người Đặt: ${fullname}\nĐịa Chỉ đón: ${address1}\nĐịa Chỉ Đến: ${address2}\nLoại xe: ${drive}\nThời gian đi: ${timebook}\nSố điện thoại: ${numberphone}\nUserIP: ${userIP}`;
 
   await sendMessageToTelegram(message);
-  alert("Bạn đã đặt chuyến đi thành công ! Vui lòng đợi it phút");
+  alert(
+    "Bạn đã đặt chuyến đi thành công ! Vui lòng đợi ít phút hoặc liên hệ trực tiếp qua 0336 488 240"
+  );
 };
