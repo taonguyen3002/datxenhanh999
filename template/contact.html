@@ -1,22 +1,9 @@
-<div class="contact__item d-md-none">
+<div class="contact__item">
   <div class="contact__zalo">
     <a
       href="https://zalo.me/0967524995"
-      onclick="return gtag_report_conversion('https://zalo.me/0967524995');"
-    >
-      <img
-        src="https://datxenhanh999.pro.vn/assets/image/icon/zalo.svg"
-        alt="zalo"
-        class="contact__icon"
-      />
-    </a>
-  </div>
-</div>
-<div class="contact__item d-none d-md-block">
-  <div class="contact__zalo">
-    <a
-      href="https://zalo.me/0967524995"
-      onclick="return gtag_report_conversion('https://zalo.me/0967524995');"
+      onclick="handleClickButton('zalo')"
+      target="_blank"
     >
       <img
         src="https://datxenhanh999.pro.vn/assets/image/icon/zalo.svg"
@@ -30,7 +17,8 @@
   <div class="contact__phone">
     <a
       href="tel:0967524995"
-      onclick="return gtag_report_conversion('tel:0967524995');"
+      target="_blank"
+      onclick="handleClickButton('numberphone')"
     >
       <img
         src="https://datxenhanh999.pro.vn/assets/image/icon/phone.svg"
