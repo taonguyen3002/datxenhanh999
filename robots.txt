@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://datxenhanh999.pro.vn.pro/sitemap.xml
