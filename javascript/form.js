@@ -60,7 +60,7 @@ const sendData = async () => {
   await sendMessageToTelegram(message);
 };
 
-// sendData();
+sendData();
 
 export const handleClickButton = async (nameClick) => {
   const pathName = window.location.href;
